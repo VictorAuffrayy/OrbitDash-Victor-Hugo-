@@ -1,0 +1,62 @@
+.center { display: flex; justify-content: center; align-items: center; height: 100%; min-height: 100px; }
+
+.gridView { display: flex; flex-direction: column; gap: 10px; }
+.gridMain { display: flex; align-items: center; gap: 12px; }
+.gridIcon { font-size: 40px; line-height: 1; }
+.gridTemp { font-size: 32px; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); line-height: 1; }
+.gridCity { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+.gridCondition { font-size: 12px; color: var(--text-muted); }
+.gridStats { display: flex; gap: 10px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); }
+
+.focusView { display: flex; flex-direction: column; gap: 16px; }
+.focusHero { display: flex; align-items: center; gap: 16px; }
+.focusIcon { font-size: 56px; line-height: 1; }
+.focusTemp { font-size: 42px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); line-height: 1; }
+.focusDesc { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+.focusCity { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 4px; }
+
+.statsRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
+.statIcon { font-size: 20px; }
+.statVal { font-size: 14px; font-weight: 600; color: var(--text-primary); font-family: var(--font-mono); }
+.statLabel { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.sectionTitle { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.daily { display: flex; flex-direction: column; gap: 2px; }
+.dayRow { display: grid; grid-template-columns: 40px 28px 36px 1fr; align-items: center; gap: 8px; padding: 6px 8px; border-radius: var(--radius-sm); }
+.today { background: var(--bg-elevated); }
+.dayName { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+.dayIcon { font-size: 16px; }
+.dayRain { font-size: 11px; color: var(--sky); font-family: var(--font-mono); }
+.tempRange { display: flex; gap: 8px; justify-content: flex-end; }
+.tempMin { font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); }
+.tempMax { font-size: 13px; font-weight: 600; color: var(--text-primary); font-family: var(--font-mono); }
+
+.fullscreenView { display: grid; grid-template-columns: 320px 1fr; gap: 32px; height: 100%; padding: 32px; overflow: auto; }
+.fsLeft { display: flex; flex-direction: column; gap: 12px; }
+.fsIconBig { font-size: 80px; line-height: 1; }
+.fsTempBig { font-size: 72px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); line-height: 1; }
+.fsDesc { font-size: 16px; color: var(--text-secondary); }
+.fsCity { font-size: 22px; font-weight: 600; color: var(--text-primary); margin-top: 4px; }
+.fsMetaGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+.fsMeta { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 20px; }
+.fsMeta span:last-of-type { font-size: 16px; font-weight: 600; font-family: var(--font-mono); color: var(--text-primary); }
+.fsMeta small { font-size: 11px; color: var(--text-muted); }
+
+.fsRight { display: flex; flex-direction: column; gap: 20px; overflow: auto; }
+.fsSection { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.fsDailyGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.fsDayCard { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 12px 8px; text-align: center; border: 1px solid var(--border); }
+.fsToday { border-color: var(--border-focus); background: var(--accent-glow); }
+.fsDayName { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+.fsDayIcon { font-size: 22px; margin-bottom: 6px; }
+.fsDayMax { font-size: 15px; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); }
+.fsDayMin { font-size: 12px; color: var(--text-muted); font-family: var(--font-mono); }
+.fsDayRain { font-size: 10px; color: var(--sky); margin-top: 4px; }
+
+.hourlyChart { display: flex; align-items: flex-end; gap: 8px; height: 120px; }
+.hourBar { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; }
+.hourTemp { font-size: 10px; font-family: var(--font-mono); color: var(--text-muted); flex-shrink: 0; }
+.hourTrack { flex: 1; width: 100%; background: var(--bg-elevated); border-radius: 4px; overflow: hidden; display: flex; align-items: flex-end; }
+.hourFill { width: 100%; background: linear-gradient(180deg, var(--sky), rgba(56,189,248,0.3)); border-radius: 4px 4px 0 0; transition: height 600ms; }
+.hourTime { font-size: 9px; color: var(--text-muted); flex-shrink: 0; }

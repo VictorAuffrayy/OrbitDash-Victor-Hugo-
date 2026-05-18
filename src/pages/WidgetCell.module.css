@@ -1,0 +1,26 @@
+.cell {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+}
+
+.handle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  transition: all var(--transition);
+}
+.handle:hover {
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+.handle:active { cursor: grabbing; }

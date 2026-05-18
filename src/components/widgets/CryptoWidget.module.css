@@ -1,0 +1,51 @@
+.center { display: flex; justify-content: center; align-items: center; height: 100%; min-height: 80px; }
+
+.gridView { display: flex; flex-direction: column; gap: 8px; }
+.gridRow { display: grid; grid-template-columns: 10px 40px 1fr auto; align-items: center; gap: 8px; }
+.coinDot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.gridSymbol { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+.gridPrice { font-size: 13px; font-family: var(--font-mono); color: var(--text-primary); }
+.change { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 600; font-family: var(--font-mono); padding: 2px 6px; border-radius: 4px; }
+.positive { color: var(--emerald); background: rgba(16,185,129,0.12); }
+.negative { color: var(--rose); background: rgba(244,63,94,0.12); }
+
+.focusView { display: flex; flex-direction: column; gap: 14px; }
+.focusHeader { display: flex; align-items: center; justify-content: space-between; }
+.tabs { display: flex; gap: 4px; background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 3px; }
+.tab { background: transparent; border: none; color: var(--text-muted); font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 5px; display: flex; align-items: center; gap: 5px; transition: all var(--transition); }
+.tabActive { background: var(--bg-card); color: var(--text-primary); box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.tabDot { width: 6px; height: 6px; border-radius: 50%; }
+.refreshBtn { background: transparent; border: none; color: var(--text-muted); padding: 4px; border-radius: 6px; display: flex; align-items: center; transition: all var(--transition); }
+.refreshBtn:hover { color: var(--text-primary); background: var(--bg-elevated); }
+
+.focusHero { display: flex; justify-content: space-between; align-items: flex-start; }
+.heroPrice { font-size: 32px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); }
+.heroName { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+.focusStats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.statBox { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 10px 12px; }
+.statLabel { display: block; font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.statVal { font-size: 13px; font-weight: 600; color: var(--text-primary); font-family: var(--font-mono); }
+
+.chartSection { display: flex; flex-direction: column; gap: 6px; }
+.chartTitle { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.sparkline { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 10px; }
+.svg { width: 100%; height: 80px; display: block; }
+.sparkLabels { display: flex; justify-content: space-between; margin-top: 4px; }
+.sparkDate { font-size: 9px; color: var(--text-muted); font-family: var(--font-mono); }
+.updateTime { font-size: 11px; color: var(--text-muted); text-align: right; }
+
+.fullscreenView { padding: 32px; height: 100%; display: flex; flex-direction: column; gap: 24px; }
+.fsTopBar { display: flex; align-items: center; justify-content: space-between; }
+.fsTitle { font-size: 28px; font-weight: 700; color: var(--text-primary); }
+.fsCards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.fsCard { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; position: relative; overflow: hidden; }
+.fsCard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--coin-color); }
+.fsCardTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+.fsCoinName { display: flex; align-items: center; gap: 10px; }
+.fsCoinDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.fsCoinSymbol { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.fsCoinFull { font-size: 12px; color: var(--text-muted); }
+.fsCoinPrice { font-size: 32px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); margin-bottom: 16px; }
+.fsCoinMeta { display: flex; gap: 20px; font-size: 12px; color: var(--text-secondary); font-family: var(--font-mono); }
+.fsMetaLabel { color: var(--text-muted); margin-right: 4px; }

@@ -1,0 +1,101 @@
+{
+  "widgets": [
+    {
+      "id": "poll-1",
+      "type": "poll",
+      "title": "Sondage du jour",
+      "position": 2,
+      "focusable": true,
+      "config": {
+        "question": "Est-ce-que vous avez fait caca aujourd'hui",
+        "options": [
+          {
+            "id": "opt-1777107342838",
+            "label": "Oui",
+            "votes": 1
+          },
+          {
+            "id": "opt-1777107344683",
+            "label": "Non",
+            "votes": 1
+          },
+          {
+            "id": "opt-1777107356257",
+            "label": "Grand Chelem",
+            "votes": 0
+          }
+        ],
+        "pastPolls": []
+      }
+    },
+    {
+      "id": "weather-1",
+      "type": "weather",
+      "title": "Météo",
+      "position": 0,
+      "focusable": true,
+      "config": {
+        "city": "Miami",
+        "latitude": 25.77427,
+        "longitude": -80.19366,
+        "unit": "celsius"
+      }
+    },
+    {
+      "id": "crypto-1",
+      "type": "crypto",
+      "title": "Crypto",
+      "position": 1,
+      "focusable": true,
+      "config": {
+        "coins": [
+          "bitcoin",
+          "ethereum",
+          "solana",
+          "cardano",
+          "dogecoin",
+          "ripple"
+        ],
+        "currency": "eur"
+      }
+    },
+    {
+      "id": "game2048-1",
+      "type": "game2048",
+      "title": "2048",
+      "position": 4,
+      "focusable": true,
+      "config": {}
+    },
+    {
+      "id": "youtube-1",
+      "type": "youtube",
+      "title": "YouTube",
+      "position": 3,
+      "focusable": true,
+      "config": {
+        "channelId": "UCN_ED4hHYLkuQBhBxGXlnDA",
+        "url": "https://www.youtube.com/watch?v=HVQSbgG69Sc&list=RDHVQSbgG69Sc&start_radio=1"
+      }
+    },
+    {
+      "id": "morpion-1",
+      "type": "morpion",
+      "title": "Morpion",
+      "position": 6,
+      "focusable": true,
+      "config": {}
+    },
+    {
+      "id": "marmiton-1",
+      "type": "marmiton",
+      "title": "Recettes",
+      "position": 5,
+      "focusable": true,
+      "config": {
+        "defaultDish": "champignons"
+      }
+    }
+  ],
+  "votes": []
+}

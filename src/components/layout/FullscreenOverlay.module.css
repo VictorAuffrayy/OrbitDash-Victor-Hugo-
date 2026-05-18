@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 180ms ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+
+.bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid var(--border); background: var(--bg-secondary); flex-shrink: 0; }
+.title { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.actions { display: flex; gap: 6px; }
+.btn { background: transparent; border: none; color: var(--text-muted); padding: 6px; border-radius: 8px; display: flex; align-items: center; transition: all var(--transition); }
+.btn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+.content { flex: 1; overflow: auto; }
