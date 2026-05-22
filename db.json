@@ -4,7 +4,7 @@
       "id": "poll-1",
       "type": "poll",
       "title": "Sondage du jour",
-      "position": 0,
+      "position": 2,
       "focusable": true,
       "config": {
         "question": "Est-ce-que vous avez fait caca aujourd'hui",
@@ -22,16 +22,6 @@
           {
             "id": "opt-1777107356257",
             "label": "Grand Chelem",
-            "votes": 1
-          },
-          {
-            "id": "opt-1779452794281",
-            "label": "Bisous Poséidon",
-            "votes": 0
-          },
-          {
-            "id": "opt-1779452801494",
-            "label": "Perfect",
             "votes": 0
           }
         ],
@@ -42,12 +32,12 @@
       "id": "weather-1",
       "type": "weather",
       "title": "Météo",
-      "position": 1,
+      "position": 0,
       "focusable": true,
       "config": {
-        "city": "Paris",
-        "latitude": 48.85341,
-        "longitude": 2.3488,
+        "city": "Miami",
+        "latitude": 25.77427,
+        "longitude": -80.19366,
         "unit": "celsius"
       }
     },
@@ -55,7 +45,7 @@
       "id": "crypto-1",
       "type": "crypto",
       "title": "Crypto",
-      "position": 2,
+      "position": 1,
       "focusable": true,
       "config": {
         "coins": [
@@ -103,7 +93,7 @@
       "position": 5,
       "focusable": true,
       "config": {
-        "defaultDish": "risotto"
+        "defaultDish": "champignons"
       }
     }
   ],

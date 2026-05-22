@@ -10,9 +10,9 @@ export default function App() {
   return (
     <AuthProvider>
       <FocusProvider>
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
           <Navbar />
-          <div style={{ flex: 1, overflowY: 'auto' }}>
+          <div style={{ flex: 1, overflow: 'hidden' }}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/admin" element={<Admin />} />

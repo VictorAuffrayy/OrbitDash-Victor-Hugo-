@@ -283,53 +283,38 @@ function MarmitonEditor({ widget }) {
   const [saved, setSaved] = useState(false)
 
   const save = async () => {
+    if (!dish.trim()) return
     setSaving(true)
-    await updateWidgetConfig(widget.id, { defaultDish: dish })
-    setSaving(false)
-    setSaved(true)
+    await updateWidgetConfig(widget.id, { defaultDish: dish.trim().toLowerCase() })
+    setSaving(false); setSaved(true)
     setTimeout(() => setSaved(false), 2000)
   }
 
-  const suggestions = [
-    { key: 'poulet',      label: '🍗 Poulet' },
-    { key: 'pates',       label: '🍝 Pâtes' },
-    { key: 'saumon',      label: '🐟 Saumon' },
-    { key: 'boeuf',       label: '🥩 Bœuf' },
-    { key: 'curry',       label: '🍛 Curry' },
-    { key: 'pizza',       label: '🍕 Pizza' },
-    { key: 'soupe',       label: '🍲 Soupe' },
-    { key: 'chocolat',    label: '🍫 Chocolat' },
-    { key: 'agneau',      label: '🐑 Agneau' },
-    { key: 'champignons', label: '🍄 Champignons' },
-    { key: 'crepes',      label: '🥞 Crêpes' },
-    { key: 'tacos',       label: '🌮 Tacos' },
-    { key: 'sushi',       label: '🍱 Sushi' },
-    { key: 'risotto',     label: '🍚 Risotto' },
-    { key: 'salade',      label: '🥗 Salade' },
-    { key: 'gateau',      label: '🎂 Gâteau' },
-  ]
-
   return (
     <div className={styles.editor}>
+      <Input
+        label="Plat par défaut (en français)"
+        value={dish}
+        onChange={e => setDish(e.target.value)}
+        placeholder="ex: poulet, pâtes, saumon, chocolat..."
+        hint="Tapez en français — la traduction est automatique"
+      />
       <div>
-        <div className={styles.fieldLabel}>Choisissez un plat par défaut</div>
+        <div className={styles.fieldLabel}>Suggestions rapides</div>
         <div className={styles.coinGrid}>
-          {suggestions.map(s => (
+          {['poulet','pates','saumon','boeuf','curry','pizza','soupe','chocolat','agneau','crepes','tacos','champignons'].map(d => (
             <button
-              key={s.key}
-              className={[styles.coinToggle, dish === s.key ? styles.coinActive : ''].join(' ')}
-              onClick={() => setDish(s.key)}
+              key={d}
+              className={[styles.coinToggle, dish === d ? styles.coinActive : ''].join(' ')}
+              onClick={() => setDish(d)}
             >
-              {s.label}
+              {d}
             </button>
           ))}
         </div>
       </div>
-      <div className={styles.selectedDish}>
-        Sélectionné : <strong>{suggestions.find(s => s.key === dish)?.label || dish}</strong>
-      </div>
       <div className={styles.saveRow}>
-        <Button onClick={save} loading={saving} icon={Save}>
+        <Button onClick={save} loading={saving} disabled={!dish.trim()} icon={Save}>
           {saved ? '✓ Sauvegardé !' : 'Sauvegarder'}
         </Button>
       </div>
