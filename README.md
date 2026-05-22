@@ -6,12 +6,10 @@
 
 ## 👥 Composition de l'équipe
 
-| Nom & Prénom | GitHub |
-|---|---|
+| Nom & Prénom 
 | Victor Auffray
 | Hugo Deschamps
 
-> ⚠️ Remplacez les pseudos GitHub par vos vrais handles avant de pousser.
 
 ---
 
