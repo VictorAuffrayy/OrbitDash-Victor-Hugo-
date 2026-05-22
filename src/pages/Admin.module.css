@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  /* ← plus de overflow hidden, on laisse la page scroller naturellement */
 }
 
 .header { display: flex; flex-direction: column; gap: 6px; }
@@ -63,7 +64,6 @@
 .expandBtn:hover:not(:disabled) { background: var(--bg-elevated); color: var(--text-primary); }
 .expandBtn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-/* Editor shared */
 .editor { display: flex; flex-direction: column; gap: 16px; }
 
 .fieldLabel {
@@ -73,7 +73,6 @@
   margin-bottom: 8px;
 }
 
-/* Poll */
 .optionList { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 .optionRow { display: flex; align-items: center; gap: 8px; }
 .flex1 { flex: 1; }
@@ -101,7 +100,6 @@
 
 .saveRow { display: flex; justify-content: flex-end; }
 
-/* Crypto */
 .coinGrid { display: flex; flex-wrap: wrap; gap: 8px; }
 .coinToggle {
   padding: 6px 14px;
@@ -134,7 +132,6 @@
 .radioOption input { display: none; }
 .radioActive { border-color: var(--accent); background: var(--accent-glow); color: var(--accent-light); }
 
-/* YouTube */
 .infoBox {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -144,11 +141,7 @@
   flex-direction: column;
   gap: 10px;
 }
-.infoText {
-  font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
+.infoText { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
 .infoText strong { color: var(--text-primary); }
 .exampleLabel { font-size: 12px; color: var(--text-muted); }
 .examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
@@ -162,4 +155,29 @@
   transition: all var(--transition);
   font-family: var(--font);
 }
-.exampleBtn:hover { border-color: var(--border-focus); color: var(--text-primary); background: var(--bg-card-hover); }
+.exampleBtn:hover { border-color: var(--border-focus); color: var(--text-primary); }
+
+.previewDetect { display: flex; flex-direction: column; gap: 8px; }
+.detectBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+.thumbPreview {
+  width: 160px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-light);
+  background: var(--bg-card);
+  border-radius: 4px;
+  padding: 2px 6px;
+  display: block;
+}
