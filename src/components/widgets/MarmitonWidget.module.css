@@ -1,0 +1,58 @@
+.center { display: flex; justify-content: center; align-items: center; height: 100%; min-height: 80px; }
+.error { font-size: 12px; color: var(--rose); text-align: center; padding: 12px; }
+
+.metaTag { font-size: 11px; background: var(--bg-elevated); color: var(--text-secondary); border-radius: 3px; padding: 2px 7px; border: 1px solid var(--border); }
+.tag { font-size: 10px; background: rgba(16,185,129,0.1); color: var(--emerald); border-radius: 3px; padding: 1px 6px; border: 1px solid rgba(16,185,129,0.2); }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.categoryTag { font-size: 11px; color: var(--amber); background: rgba(245,158,11,0.1); border-radius: 3px; padding: 1px 7px; border: 1px solid rgba(245,158,11,0.2); }
+.ingredientCount { font-size: 11px; color: var(--text-muted); }
+.ytLink { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #ff4444; text-decoration: none; font-weight: 600; padding: 6px 12px; background: rgba(255,68,68,0.1); border-radius: var(--radius-sm); border: 1px solid rgba(255,68,68,0.2); transition: all var(--transition); }
+.ytLink:hover { background: rgba(255,68,68,0.2); }
+
+/* Grid */
+.gridView { display: flex; flex-direction: column; gap: 8px; }
+.gridImg { position: relative; border-radius: var(--radius-sm); overflow: hidden; }
+.gridPhoto { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.gridOverlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 8px; }
+.gridArea { font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 600; }
+.gridName { font-size: 14px; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+.gridMeta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+/* Focus */
+.focusView { display: flex; flex-direction: column; gap: 12px; height: 100%; overflow: hidden; }
+.focusHero { display: flex; gap: 12px; flex-shrink: 0; }
+.focusImg { width: 110px; height: 80px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; }
+.focusInfo { flex: 1; display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.focusName { font-size: 15px; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+.focusMeta { display: flex; gap: 5px; flex-wrap: wrap; }
+.randomBtn { display: inline-flex; align-items: center; gap: 5px; background: transparent; border: 1px solid var(--border); color: var(--text-muted); border-radius: var(--radius-sm); padding: 3px 10px; font-size: 11px; align-self: flex-start; transition: all var(--transition); margin-top: 2px; }
+.randomBtn:hover { border-color: var(--border-focus); color: var(--text-primary); }
+
+/* Tabs */
+.tabs { display: flex; gap: 4px; background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 3px; flex-shrink: 0; }
+.tab { background: transparent; border: none; color: var(--text-muted); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 5px; transition: all var(--transition); flex: 1; }
+.tabActive { background: var(--bg-card); color: var(--text-primary); box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+
+/* Ingredients */
+.ingredientGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; overflow-y: auto; flex: 1; }
+.ingredient { background: var(--bg-elevated); border-radius: var(--radius-sm); padding: 6px 10px; display: flex; justify-content: space-between; align-items: center; gap: 6px; border: 1px solid var(--border); }
+.ingName { font-size: 12px; color: var(--text-primary); font-weight: 500; }
+.ingMeasure { font-size: 11px; color: var(--accent-light); font-family: var(--font-mono); white-space: nowrap; }
+
+/* Steps */
+.stepsList { display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; }
+.step { display: flex; gap: 10px; align-items: flex-start; }
+.stepNum { width: 22px; height: 22px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+.stepText { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+
+/* Fullscreen */
+.fullscreenView { display: grid; grid-template-columns: 340px 1fr; height: 100%; overflow: hidden; }
+.fsLeft { display: flex; flex-direction: column; gap: 16px; padding: 24px; border-right: 1px solid var(--border); overflow-y: auto; }
+.fsPhoto { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-lg); }
+.fsInfo { display: flex; flex-direction: column; gap: 10px; }
+.fsName { font-size: 22px; font-weight: 800; color: var(--text-primary); line-height: 1.3; }
+.fsMeta { display: flex; gap: 6px; flex-wrap: wrap; }
+.fsRight { display: flex; flex-direction: column; gap: 14px; padding: 24px; overflow: hidden; }
+.fsRight .ingredientGrid { grid-template-columns: 1fr 1fr; }
+.fsRight .stepsList { flex: 1; }
+.fsRight .stepText { font-size: 13px; }

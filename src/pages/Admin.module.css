@@ -1,0 +1,176 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header { display: flex; flex-direction: column; gap: 6px; }
+.title { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+.subtitle { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+.list { display: flex; flex-direction: column; gap: 12px; }
+
+.adminCard { transition: all var(--transition); }
+
+.cardTitle { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+
+.widgetType {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-light);
+  background: var(--accent-glow);
+  border: 1px solid rgba(139,92,246,0.2);
+  border-radius: 4px;
+  padding: 2px 7px;
+  flex-shrink: 0;
+}
+
+.widgetName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noEditorBadge {
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+.expandBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.expandBtn:hover:not(:disabled) { background: var(--bg-elevated); color: var(--text-primary); }
+.expandBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Editor shared */
+.editor { display: flex; flex-direction: column; gap: 16px; }
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* Poll */
+.optionList { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.optionRow { display: flex; align-items: center; gap: 8px; }
+.flex1 { flex: 1; }
+.voteCount {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: right;
+}
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.removeBtn:hover { color: var(--rose); background: rgba(244,63,94,0.1); }
+.optionActions { display: flex; gap: 8px; }
+
+.saveRow { display: flex; justify-content: flex-end; }
+
+/* Crypto */
+.coinGrid { display: flex; flex-wrap: wrap; gap: 8px; }
+.coinToggle {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  font-family: var(--font);
+}
+.coinToggle input { display: none; }
+.coinActive { border-color: var(--accent); background: var(--accent-glow); color: var(--accent-light); }
+
+.radioGroup { display: flex; gap: 8px; }
+.radioOption {
+  padding: 6px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.radioOption input { display: none; }
+.radioActive { border-color: var(--accent); background: var(--accent-glow); color: var(--accent-light); }
+
+/* YouTube */
+.infoBox {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.infoText {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.infoText strong { color: var(--text-primary); }
+.exampleLabel { font-size: 12px; color: var(--text-muted); }
+.examples { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.exampleBtn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-size: 12px;
+  transition: all var(--transition);
+  font-family: var(--font);
+}
+.exampleBtn:hover { border-color: var(--border-focus); color: var(--text-primary); background: var(--bg-card-hover); }
+.selectedDish {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}
+.selectedDish strong {
+  color: var(--text-primary);
+}

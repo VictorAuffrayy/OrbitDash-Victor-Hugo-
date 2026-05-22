@@ -1,0 +1,32 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.hoverable:hover {
+  border-color: rgba(139,92,246,0.25);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+.clickable { cursor: pointer; }
+.elevated { box-shadow: var(--shadow-card); }
+.glow {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-glow);
+}
+.header {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.body { padding: 16px 20px; }
+.footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.15);
+}
